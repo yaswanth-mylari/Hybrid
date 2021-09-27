@@ -53,7 +53,7 @@ public class base {
 	}
 	public static void closePopup() {
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
-		new WebDriverWait(driver, 20).until(ExpectedConditions.elementToBeClickable(By.cssSelector("*[data-gaaction=\"popup.auth.close\"]")));
+		new WebDriverWait(driver, 30).until(ExpectedConditions.elementToBeClickable(By.cssSelector("*[data-gaaction=\"popup.auth.close\"]")));
 		WebElement ele=driver.findElement(By.cssSelector("*[data-gaaction=\"popup.auth.close\"]"));
 		jse.executeScript("arguments[0].click()", ele);
 	}
